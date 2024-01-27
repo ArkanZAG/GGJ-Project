@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpHeight;
+    [SerializeField] private Collectible collectible;
+    [SerializeField] private HealthBar healthBar;
+
+    private string gameOverScene = "GameOverScene";
+    
     void Update()
     {
         Movement();
@@ -22,5 +29,20 @@ public class PlayerMovement : MonoBehaviour
         {
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpHeight);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        healthBar.TakingDamage(damage);
+
+        if (healthBar.GetCurrentValue() <= 0)
+        {
+            SceneManager.LoadScene(gameOverScene);
+        }
+    }
+
+    private void CollectingCoins()
+    {
+        
     }
 }
