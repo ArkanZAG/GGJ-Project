@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class DealDamage : MonoBehaviour
 {
-    [SerializeField] private int damage;
-    
-    private void OnCollisionEnter2D(Collision2D other)
+    public int damage;
+    [SerializeField] private PlayerHealth playerHealth;
+    // public void TakeDamage(int amount)
+    // {
+
+    // }
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("test");
         if (other.gameObject.tag != "Player") return;
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        if (player == null) return;
-        player.TakeDamage(damage);
+            Debug.Log("test");
+            playerHealth.TakeDamage(damage);
+            
+        
+        
     }
 }
