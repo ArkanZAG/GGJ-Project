@@ -56,7 +56,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   playerAnimator: {fileID: 2613390354377805794}
   audioSource: {fileID: 6988885148754811780}
-  walkAudioClip: {fileID: 8300000, guid: 8e639a89455f0314794dd7578db1518b, type: 3}
+  walkAudioClip: {fileID: 8300000, guid: 345ad304858de0149b6f0d1926e3b63c, type: 3}
   jumpAudioClip: {fileID: 8300000, guid: 974abcba47e5dd346b5b3ad1a5d09af3, type: 3}
 --- !u!50 &1077576854475223252
 Rigidbody2D:
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1008771109, guid: 332c0fea11b6ca14aadcefee33bda021, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
