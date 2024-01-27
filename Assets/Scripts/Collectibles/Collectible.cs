@@ -7,11 +7,16 @@ using Image = UnityEngine.UI.Image;
 
 
 public class Collectible : MonoBehaviour
+
 {
+    public AudioSource SoundEffect;
     [SerializeField] private int scoreValue;
     [SerializeField] private ScoreCounter scoreCounter;
     [SerializeField] private GameObject imageGameObject;
     private bool collected;
+    
+    
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (collected) return;
@@ -20,7 +25,14 @@ public class Collectible : MonoBehaviour
         Debug.Log("Score Added");
         scoreCounter.AddScore(scoreValue);
         scoreCounter.UpdateScore();
+        SoundEffect.Play();
         imageGameObject.gameObject.SetActive(false);
         collected = true;
     }
+
+    // public void OnColissionEnter2D(Collision2D collision){
+    //     if(collision.gameObject.tag == "CollisionTag"){
+            
+    //     }
+    // }
 }
