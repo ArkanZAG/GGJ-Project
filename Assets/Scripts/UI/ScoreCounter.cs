@@ -13,9 +13,9 @@ public class ScoreCounter : MonoBehaviour
         currentScore += value;
     }
 
-    private void UpdateScore()
+    public void UpdateScore()
     {
-        counterText.text += currentScore;
+        counterText.text = currentScore.ToString();
     }
 
     
