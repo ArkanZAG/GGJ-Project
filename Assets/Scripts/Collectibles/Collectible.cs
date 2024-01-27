@@ -30,9 +30,5 @@ public class Collectible : MonoBehaviour
         collected = true;
     }
 
-    // public void OnColissionEnter2D(Collision2D collision){
-    //     if(collision.gameObject.tag == "CollisionTag"){
-            
-    //     }
-    // }
+    
 }
