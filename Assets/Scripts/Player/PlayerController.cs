@@ -36,12 +36,12 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput > 0.01f)
         {
             transform.localScale = Vector3.one;
-            audioSource.Play();
+            audioSource.PlayOneShot(walkAudioClip);
         }
         else if (horizontalInput < -0.01f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
-            audioSource.Play();
+            audioSource.PlayOneShot(walkAudioClip);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
         {
             Jump();
+            audioSource.clip = jumpAudioClip;
             audioSource.Play();
             this.transform.DOScaleY(1f, 0.1f);
         }
