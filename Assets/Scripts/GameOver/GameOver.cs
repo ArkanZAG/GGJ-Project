@@ -36,7 +36,8 @@ public class GameOver : MonoBehaviour
                 "Semua masalah pasti ada jalannya",
                 "Never gonna give you up",
                 "Yah ngulang lagi",
-                "Jangan buang-buang waktu kamu:D"
+                "Jangan buang-buang waktu kamu:D",
+                "Tetap menyerah dan janganlah berusaha"
             };
     public void GetRandomText()
     {
