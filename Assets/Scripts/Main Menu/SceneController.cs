@@ -6,9 +6,7 @@ using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 
-
-
-public class SceneLoad : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
     // Start is called before the first frame update
     private string gameScene = "GameScene";
@@ -33,8 +31,9 @@ public class SceneLoad : MonoBehaviour
         Debug.Log("berhasil");
     }
 
-    void QuitScene()
+    public void QuitScene()
     {
+        Debug.Log("quit");
         Application.Quit();
     }
     
@@ -48,3 +47,4 @@ public class SceneLoad : MonoBehaviour
         SceneManager.LoadScene(levelScene);
     }
 }
+
